@@ -285,6 +285,24 @@ return [
                     'route'  => 'servicos.create',
                     'icon' => 'fas fa-fw fa-file',
                 ],
+
+            ],
+        ],
+        [
+            'text'        => 'Cadastro de Usuário',
+            'icon'        => 'fas fa-fw fa-user',
+            'submenu' => [
+                [
+                    'text' => 'Lista de Usuários',
+                    'route'  => 'usuarios.index',
+                    'icon'   => 'fas fa-fw fa-list',
+                ],
+                [
+                    'text' => 'Novo Usuário',
+                    'route'  => 'usuarios.create',
+                    'icon' => 'fas fa-fw fa-file',
+                ],
+
             ],
         ],
 
