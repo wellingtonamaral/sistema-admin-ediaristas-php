@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ServicoRequest;
 use App\Models\Servico;
 use Illuminate\Http\Request;
 
@@ -18,7 +19,7 @@ class ServicoController extends Controller
     {
         return view('servicos.create');
     }
-    public function store(Request $request)
+    public function store(ServicoRequest $request)
     {
         $dados = $request->except('_token');
 
