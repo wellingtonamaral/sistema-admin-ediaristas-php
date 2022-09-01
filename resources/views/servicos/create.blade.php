@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-@include('servicos._mensagens')
+@include('_mensagens')
 
 
 

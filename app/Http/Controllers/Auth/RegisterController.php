@@ -61,7 +61,8 @@ class RegisterController extends Controller
      *
      * @param  array  $data
      * @return \App\Models\User
-     */
+    */
+    /*
     protected function create(array $data)
     {
         return User::create([
@@ -70,4 +71,19 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+    */
+    protected function create(array $data)
+    {
+        return abort(403);
+    }
+
+    /**
+     * Mostra a página de registro
+     *
+     */
+    public function showRegistrationForm()
+    {
+        return abort(403);
+    }
+
 }

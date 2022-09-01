@@ -49,21 +49,19 @@ class ServicoController extends Controller
      * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
      *
      */
-    public function edit(int $id)
+    public function edit(Servico $servico)
     {
-        $servico = Servico::findOrFail($id);
-
-        return view('servicos.edit')->with('servico', $servico);
+            return view('servicos.edit')->with('servico', $servico);
     }
     /**
      * Atualiza um regristo no BD
      * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
      */
-    public function update(int $id, Request $request)
+    public function update(Servico $servico, Request $request)
     {
         $dados = $request->except(['_token', '_method']);
 
-        $servico = Servico::findOrFail($id);
+       
         $servico->update($dados);
 
         return redirect()->route('servicos.index')
